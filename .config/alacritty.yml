@@ -1,0 +1,78 @@
+wind#ow:
+  title: Alacritty
+
+  class:
+    instance: Alacritty
+
+
+scrolling:
+  history: 50000
+  multiplier: 3
+
+font:
+  normal:
+    family: monospace
+  bold:
+    family: monospace
+    style: Bold
+
+  italic:
+    family: monospace
+    style: Italic
+
+  bold_italic:
+    family: monospace
+    style: Bold Italic
+
+  size: 14.0
+
+
+visual_bell:
+  animation: EaseOutExpo
+  duration: 0
+  color: '#ffffff'
+
+background_opacity: 1.0
+
+selection:
+  semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+  save_to_clipboard: false
+
+dynamic_title: true
+
+cursor:
+  style: Block
+  vi_mode_style: Block
+  unfocused_hollow: false
+
+live_config_reload: true
+
+shell:
+  program: /usr/bin/zsh
+
+mouse:
+  double_click: { threshold: 300 }
+  triple_click: { threshold: 300 }
+  hide_when_typing: false
+
+  url:
+    launcher:
+      program: xdg-open
+      args: []
+    modifiers: None
+
+key_bindings:
+  - { key: V,         mods: Alt,                  action: Paste               }
+  - { key: C,         mods: Alt,                  action: Copy                }
+  - { key: PageUp,    mods: Shift,   mode: ~Alt,  action: ScrollHalfPageUp    }
+  - { key: PageDown,  mods: Shift,   mode: ~Alt,  action: ScrollHalfPageDown  }
+
+  - { key: Key0,     mods: Control,                 action: ResetFontSize     }
+  - { key: Equals,   mods: Control,                 action: IncreaseFontSize  }
+  - { key: Add,      mods: Control,                 action: IncreaseFontSize  }
+  - { key: Subtract, mods: Control,                 action: DecreaseFontSize  }
+  - { key: Minus,    mods: Control,                 action: DecreaseFontSize  }
+
+  # Vi Mode
+  - { key: V,  mods: Shift|Alt, mode: Vi, action: ScrollToBottom              }
+  - { key: V,  mods: Shift|Alt,           action: ToggleViMode                }
