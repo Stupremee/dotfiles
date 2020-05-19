@@ -1,3 +1,6 @@
+# This is required for gpg to prompt for the passphrase in the tty
+export GPG_TTY=$(tty)
+
 # General settings
 autoload -U colors && colors
 setopt HIST_IGNORE_SPACE
