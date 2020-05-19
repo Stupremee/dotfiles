@@ -1,0 +1,18 @@
+[user]
+  user = "Justus K."
+  email = justus.k@protonmail.com
+  name = Justus K
+  signingkey = 4FD4C583E437B8AA
+[commit]
+  gpgsign = true
+[color]
+  ui = auto
+[alias]
+  st = "status"
+  co = "checkout"
+  df = "diff"
+  lg = "log --oneline"
+  lp = "log -p"
+  p = "push"
+  c = "commit -S -m"
+  a = "add"
