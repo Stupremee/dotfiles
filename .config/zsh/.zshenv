@@ -1,5 +1,6 @@
 export TERMINAL="alacritty"
 export TERM=$TERMINAL
+export BROWSER="qutebrowser"
 export LANG=en_US.UTF-8
 export ZDOTDIR="$HOME/.config/zsh"
 export MANPATH="$(manpath 2> /dev/null)"

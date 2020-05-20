@@ -2,6 +2,9 @@
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
 
+;; Custom configuration
+(setq x86-lookup-pdf "~/Documents/x86_reference.pdf")
+
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration.
 You should not put any user code in this function besides modifying the variable
@@ -31,24 +34,36 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
-     ;; <M-m f e R> (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
-     helm
-     ;; auto-completion
-     ;; better-defaults
+     ;; Languages that I need
+     asm
+     rust
+     c-c++
+     python
+     haskell
+     markdown
      emacs-lisp
-     ;; git
-     ;; markdown
-     ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
-     ;; spell-checking
-     ;; syntax-checking
-     ;; version-control
+
+     lsp
+     git
+     helm
+     emoji
+     colors
+     treemacs
+     spell-checking
+     version-control
+     syntax-checking
+     auto-completion
+
+     (spell-checking :variables spell-checking-enable-auto-dictionary t)
+     (rust :variables lsp-rust-server 'rust-analyzer)
+     (colors :variables
+             colors-colorize-identifiers 'variables)
+     (auto-completion :variables
+                      spacemacs-default-company-backends '(company-files company-capf)
+                      auto-completion-enable-sort-by-usage t
+                      auto-completion-enable-help-tooltip t
+                      auto-completion-enable-snippets-in-popup t
+                      auto-completion-return-key-behavior 'complete)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -132,7 +147,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
+   dotspacemacs-default-font '("Hack Nerd Font"
                                :size 13
                                :weight normal
                                :width normal

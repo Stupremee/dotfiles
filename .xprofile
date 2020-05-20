@@ -1,1 +1,2 @@
 xrandr --output HDMI-0 --auto --output DP-1 --auto --left-of HDMI-0
+feh --bg-fill ~/.config/wallpaper.png
