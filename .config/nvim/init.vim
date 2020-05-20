@@ -1,7 +1,7 @@
 set shell=/usr/bin/zsh
 
 " Set leader keys
-let g:maleader="\<Space>"
+let g:mapleader="\<Space>"
 let g:localleader=","
 
 " ------------------
@@ -16,6 +16,7 @@ Plug 'airblade/vim-rooter'
 Plug 'sbdchd/neoformat'
 Plug 'scrooloose/nerdcommenter'
 Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 
 call plug#end()

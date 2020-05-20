@@ -39,6 +39,7 @@ alias cat="bat"
 alias py="python"
 alias g="git"
 alias ps="procs"
+alias pdf="zathura"
 
 alias config="git --git-dir=$HOME/dev/dotfiles --work-tree=$HOME"
 
