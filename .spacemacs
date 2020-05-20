@@ -4,6 +4,8 @@
 
 ;; Custom configuration
 (setq x86-lookup-pdf "~/Documents/x86_reference.pdf")
+(setq neo-theme 'nerd)
+(setq neo-vc-integration '(face))
 
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration.
@@ -43,12 +45,11 @@ values."
      markdown
      emacs-lisp
 
-     lsp
      git
      helm
      emoji
+     shell
      colors
-     treemacs
      spell-checking
      version-control
      syntax-checking
@@ -274,7 +275,7 @@ values."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers 'relative
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
    dotspacemacs-folding-method 'evil
@@ -328,3 +329,17 @@ you should place your code here."
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (xterm-color shell-pop multi-term eshell-z eshell-prompt-extras esh-help yapfify x86-lookup toml-mode smeargle rainbow-mode rainbow-identifiers racer pyvenv pytest pyenv-mode py-isort pip-requirements orgit nasm-mode mmm-mode markdown-toc magit-gitflow magit-popup live-py-mode intero hy-mode dash-functional hlint-refactor hindent helm-pydoc helm-hoogle helm-gitignore helm-company helm-c-yasnippet haskell-snippets gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy flyspell-correct-helm flyspell-correct flycheck-rust flycheck-pos-tip flycheck-haskell flycheck evil-magit magit git-commit with-editor transient emoji-cheat-sheet-plus disaster diff-hl cython-mode company-statistics company-quickhelp pos-tip company-ghci company-ghc ghc haskell-mode company-emoji company-cabal company-c-headers company-anaconda company color-identifiers-mode cmm-mode cmake-mode clang-format cargo markdown-mode rust-mode auto-yasnippet yasnippet auto-dictionary anaconda-mode pythonic ac-ispell auto-complete ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
