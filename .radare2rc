@@ -2,3 +2,4 @@ e asm.cmt.right=true
 e asm.pseudo = true
 eco solarized
 e scr.utf8 = true
+e scr.utf8.curvy = true
