@@ -54,9 +54,10 @@ eval "$(hub alias -s)"
 source <(antibody init)
 antibody bundle < $ZDOTDIR/plugins.txt
 
-# Load fzf key bindings and completion
+# Load fzf key bindings, theme and completion
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
+source $ZDOTDIR/fzf.config
 
 # Start starship
 eval $(starship init zsh)
