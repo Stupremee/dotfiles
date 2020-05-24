@@ -117,6 +117,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
     , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
+
+    -- Make a screenshot
+    , ((modm              , xK_Print     ), spawn "maim -s | xclip -sel c -t image/png")
     ]
     ++
 
