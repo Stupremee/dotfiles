@@ -6,7 +6,7 @@ export ZDOTDIR="$HOME/.config/zsh"
 export MANPATH="$(manpath 2> /dev/null)"
 export EDITOR="nvim"
 export GOPATH="$HOME/dev/go"
-export PATH="$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$HOME/.ghcup/bin"
+export PATH="$HOME/.ghcup/bin:$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export CARGO_TARGET_DIR="$HOME/.cargo/target"
 
