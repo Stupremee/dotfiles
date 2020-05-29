@@ -1,6 +1,5 @@
 # This is required for gpg to prompt for the passphrase in the tty
-export GPG_TTY=$(tty)
-
+export GPG_TTY=$(tty) 
 # General settings
 autoload -U colors && colors
 setopt HIST_IGNORE_SPACE
@@ -58,6 +57,9 @@ antibody bundle < $ZDOTDIR/plugins.txt
 source /usr/share/fzf/completion.zsh
 source /usr/share/fzf/key-bindings.zsh
 source $ZDOTDIR/fzf.config
+
+# Load completions for gh
+source $ZDOTDIR/_gh
 
 # Start starship
 eval $(starship init zsh)
