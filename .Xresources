@@ -1,5 +1,12 @@
 *.font: monospace:style=regular:pixelsize=12
 
+*foreground: #d8dee9
+*foreground-dim: #4c566a
+*background: #2e3440
+*highlight: #8fbcbb
+*alert: #bf616a
+*icon: #81a1c1
+
 #define nord0 #2E3440
 #define nord1 #3B4252
 #define nord2 #434C5E

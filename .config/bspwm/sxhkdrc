@@ -1,0 +1,70 @@
+# Reload sxhkd config
+super + Escape
+	pkill -USR1 -x sxhkd
+
+# Basic binds
+super + Return
+  $TERMINAL
+super + p
+  dmenu_run
+super + shift + w
+  $BROWSER
+super + Print
+  screenshot
+
+# Multimedia stuff
+XF86AudioMute
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
+XF86Audio{Raise,Lower}Volume
+  pulsemixer --change-volume {+,-}5
+XF86Audio{Next,Prev}
+	playerctl {next,previous}
+XF86Audio{Play,Stop}
+	playerctl {play-pause,stop}
+
+#### Bspwm binds
+# close or kill
+super + {_,shift + }q
+  bspc node -{c,k}
+# alterante tiled and monocle layout
+super + {_,shift +}f
+  bspc {desktop -l next,node -t ~fullscreen}
+# rotate current node 90 degrees
+super + y
+  bspc node @focused:/ -R 90
+# swap current and biggest node
+super + @space
+  bspc node -s biggest.local || bspc node -s next.local
+# set floating mode for window
+super + shift + space
+  bspc node focused -t \~floating
+# quit/restart bspwm
+super + shift + {q,r}
+  bspc {quit,wm -r}
+
+
+#
+# focus / swap
+#
+
+# focus node with hjkl
+super + {_,shift +}{h,j,k,l}
+  bspc node -{f,s} {west,south,north,east}
+# focus or swap the next node
+super + {_,shift + }tab
+  bspc node -{f,s} next.local 
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+  bspc {desktop -f,node -d} ^{1-9,10}
+# preselect the ration
+super + ctrl + {1-9}
+  bspc node -o .{1-9}
+# cancel the preselection
+super + ctrl + space
+  bspc node -p cancel
+# expand a window by moving one of its side outward
+super + alt + {h,j,k,l}
+  bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+# contract a window by moving one of its side inward
+super + alt + shift + {h,j,k,l}
+  bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
