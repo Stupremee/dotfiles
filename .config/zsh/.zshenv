@@ -6,9 +6,13 @@ export ZDOTDIR="$HOME/.config/zsh"
 export MANPATH="$(manpath 2> /dev/null)"
 export EDITOR="nvim"
 export GOPATH="$HOME/dev/go"
-export PATH="$HOME/.ghcup/bin:$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$HOME/.config/bin"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export CARGO_TARGET_DIR="$HOME/.cargo/target"
+
+# devkit Pro
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=${DEVKITPRO}/devkitARM
+export DEVKITPPC=${DEVKITPRO}/devkitPPC
 
 # Load secret environment variables
 source $ZDOTDIR/.zsecrets
@@ -23,3 +27,6 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 export LESSHISTFILE=-
+
+# Add path
+export PATH="${DEVKITPRO}/tools/bin:$HOME/.ghcup/bin:$PATH:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.emacs.d/bin:$HOME/.config/bin"
