@@ -28,7 +28,7 @@ super + {_,shift + }q
   bspc node -{c,k}
 # alterante tiled and monocle layout
 super + {_,shift +}f
-  bspc {desktop -l next,node -t ~fullscreen}
+  bspc {desktop -l next,node -t \~fullscreen}
 # rotate current node 90 degrees
 super + y
   bspc node @focused:/ -R 90

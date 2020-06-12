@@ -33,12 +33,16 @@ SAVEHIST=100000
 
 # Alias settings
 alias ls="exa"
+alias less="bat"
 alias l="ls -la"
 alias cat="bat"
 alias py="python"
 alias g="git"
 alias ps="procs"
 alias pdf="zathura"
+alias license="licensor"
+alias find="fd"
+alias du="dua"
 
 alias config="git --git-dir=$HOME/dev/dotfiles --work-tree=$HOME"
 

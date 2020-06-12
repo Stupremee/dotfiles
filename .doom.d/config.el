@@ -51,6 +51,18 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
-(setq projectile-project-search-path '("~/dev/c" "~/dev/rust"))
+(setq projectile-project-search-path '("~/dev/c" "~/dev/rust" "~/dev/clojure"))
 
 (setq rustic-lsp-server 'rust-analyzer)
+
+(setq haskell-interactive-popup-errors 'nil)
+
+(set-email-account! "protonmail.com"
+  '((mu4e-sent-folder       . "/Sent Mail")
+    (mu4e-drafts-folder     . "/Drafts")
+    (mu4e-trash-folder      . "/Trash")
+    (mu4e-refile-folder     . "/All Mail")
+    (smtpmail-smtp-user     . "justus.k@protonmail.com"))
+  t)
+
+(setq +notmuch-sync-backend 'mbsync)
