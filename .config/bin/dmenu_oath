@@ -1,0 +1,3 @@
+#!/bin/sh
+
+ykman oath code "$(ykman oath list | dmenu)" | rg -o "\d+" | xclip -sel c

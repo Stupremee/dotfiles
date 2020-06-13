@@ -11,6 +11,8 @@ super + shift + w
   $BROWSER
 super + Print
   screenshot
+super + o
+  dmenu_oath
 
 # Multimedia stuff
 XF86AudioMute
